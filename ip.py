@@ -65,13 +65,16 @@ class IP:
 
     @staticmethod
     def isIp(ip: str) -> bool:
-        fragment = ip.split(".")
-        for i in fragment:
-            if 0 <= int(i) <= 255:
-                pass
-            else:
-                return False
-        return True
+        if len(fragment) == 4:
+            fragment = ip.split(".")
+            for i in fragment:
+                if 0 <= int(i) <= 255:
+                    pass
+                else:
+                    return False
+            return True
+        else:
+            return False
 
     def isLan(self, _lan: str) -> bool:
         pass
