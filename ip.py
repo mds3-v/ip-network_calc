@@ -65,8 +65,8 @@ class IP:
 
     @staticmethod
     def isIp(ip: str) -> bool:
+        fragment = ip.split(".")
         if len(fragment) == 4:
-            fragment = ip.split(".")
             for i in fragment:
                 if 0 <= int(i) <= 255:
                     pass
